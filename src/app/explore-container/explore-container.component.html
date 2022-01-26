@@ -1,4 +1,17 @@
-<div id="container">
-  <strong>{{ name }}</strong>
-  <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-</div>
+<!-- Toggles in a List -->
+<ion-list>
+  <ion-item>
+    <ion-label>Tenor</ion-label>
+    <ion-toggle [(ngModel)]="isTenorEnabled" (ionChange)="changeFeatureStatus('isTenorEnabled')"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Pedir</ion-label>
+    <ion-toggle [(ngModel)]="isAskPaymentEnabled" (ionChange)="changeFeatureStatus('isAskMultiPaymentEnabled')"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Pedir Varios</ion-label>
+    <ion-toggle [(ngModel)]="isAskMultiPaymentEnabled" (ionChange)="changeFeatureStatus('isAskPaymentEnabled')"></ion-toggle>
+  </ion-item>
+</ion-list>
