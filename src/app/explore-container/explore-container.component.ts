@@ -15,9 +15,11 @@ export class ExploreContainerComponent implements OnInit {
     let logger = configcat.createConsoleLogger(3);
 
       this.configCatClient = configcat.createClientWithAutoPoll("LdzZCCN56U6PFl6vJYdaPw/wRoTEKKGK0O-557Cnm5OxA", { // <-- This is the actual SDK Key for your Production environment
-          pollIntervalSeconds: 30,
-          logger: logger
-});
+          pollIntervalSeconds: 3,
+          logger: logger},
+
+
+);
 
 
    }
@@ -32,6 +34,7 @@ export class ExploreContainerComponent implements OnInit {
   
 
   public configCatClient: IConfigCatClient;
+  public userObject:User;
 
   public isTenorEnabled:boolean=undefined;
   public isAskPaymentEnabled:boolean=undefined;
@@ -62,11 +65,11 @@ export class ExploreContainerComponent implements OnInit {
 
   getAskMultiPaymentStatus(){
     var userObject={
-      identifier:"SOMEID",
-      email:"eduardo.millan96@gmail.com",
-      country:"Panama",
+      "identifier":"SOMEID",
+      "email":"eduardo.millan96@gmail.com",
+      "country":"Panama",
       custom:{
-        "Type":"P"
+        "Type":"a"
       }
     };
     this.configCatClient.getValueAsync("isAskMultiPaymentEnabled",  false, userObject)

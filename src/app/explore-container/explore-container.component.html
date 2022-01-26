@@ -2,16 +2,16 @@
 <ion-list>
   <ion-item>
     <ion-label>Tenor</ion-label>
-    <ion-toggle [(ngModel)]="isTenorEnabled" (ionChange)="changeFeatureStatus('isTenorEnabled')"></ion-toggle>
+    <ion-toggle [(ngModel)]="isTenorEnabled" ></ion-toggle>
   </ion-item>
 
   <ion-item>
     <ion-label>Pedir</ion-label>
-    <ion-toggle [(ngModel)]="isAskPaymentEnabled" (ionChange)="changeFeatureStatus('isAskMultiPaymentEnabled')"></ion-toggle>
+    <ion-toggle [(ngModel)]="isAskPaymentEnabled" ></ion-toggle>
   </ion-item>
 
   <ion-item>
     <ion-label>Pedir Varios</ion-label>
-    <ion-toggle [(ngModel)]="isAskMultiPaymentEnabled" (ionChange)="changeFeatureStatus('isAskPaymentEnabled')"></ion-toggle>
+    <ion-toggle [(ngModel)]="isAskMultiPaymentEnabled"></ion-toggle>
   </ion-item>
 </ion-list>
